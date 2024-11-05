@@ -7,9 +7,11 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import code.config.Config;
+
 public class Server {
     public static void main(String[] args) {
-        int port = 5000;
+        int port = Config.SERVER_PORT;
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Server started on port " + port);
